@@ -1,7 +1,7 @@
 package com.raczy.server.http;
 
 import com.google.gson.Gson;
-import com.oracle.tools.packager.Log;
+// import com.oracle.tools.packager.Log;
 import com.raczy.chinesecheckers.session.GameSession;
 import com.raczy.server.GameHandlerAdapter;
 import com.raczy.server.Utility;
@@ -139,7 +139,7 @@ public class GameHttpServerHandler extends SimpleChannelInboundHandler<Object> {
         FullHttpResponse response = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, status, Unpooled.copiedBuffer(json, CharsetUtil.UTF_8));
         response.headers().set(HttpHeaderNames.CONTENT_TYPE, "application/json; charset=UTF8");
 
-        Log.info("Writing http response.");
+        // Log.info("Writing http response.");
         ctx.writeAndFlush(response);
     }
 

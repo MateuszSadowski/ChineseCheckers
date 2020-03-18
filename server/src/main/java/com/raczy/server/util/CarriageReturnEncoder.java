@@ -1,6 +1,6 @@
 package com.raczy.server.util;
 
-import com.sun.istack.internal.NotNull;
+// import com.sun.istack.internal.NotNull;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.string.StringEncoder;
@@ -16,7 +16,8 @@ import java.util.List;
 @ChannelHandler.Sharable
 public class CarriageReturnEncoder extends StringEncoder {
 
-    public CarriageReturnEncoder(@NotNull Charset charset) {
+    // public CarriageReturnEncoder(@NotNull Charset charset) {
+    public CarriageReturnEncoder(Charset charset) {
         super(charset);
     }
 

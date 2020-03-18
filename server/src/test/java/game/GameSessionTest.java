@@ -6,7 +6,7 @@ import com.raczy.chinesecheckers.session.GameSession;
 import com.raczy.chinesecheckers.session.GameSessionCallback;
 import com.raczy.chinesecheckers.session.GameSessionState;
 import com.raczy.chinesecheckers.session.StandardGameSession;
-import com.sun.xml.internal.ws.policy.AssertionSet;
+// import com.sun.xml.internal.ws.policy.AssertionSet;
 import org.junit.*;
 
 import java.util.ArrayList;
