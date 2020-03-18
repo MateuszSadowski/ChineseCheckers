@@ -22,7 +22,7 @@ public class StandardGameMode implements GameMode {
     public boolean playerStatus(Player player) {
         int zoneID = Field.oppositeEdge(player.getZoneID()); //?
         Map<Integer, Field> playerZone = this.board.getPlayerZones().get(zoneID);
-        boolean result = true;
+        boolean result = false;
 
         for(Field f: playerZone.values()) {
             if(f.getChecker() == null) {
@@ -30,9 +30,8 @@ public class StandardGameMode implements GameMode {
                 break;
             }else {
                 Player p = f.getChecker();
-                if(p.getId() != player.getId()) {
-                    result = false;
-                    break;
+                if(p.getId() == player.getId()) {
+                    result = true;
                 }
             }
         }
