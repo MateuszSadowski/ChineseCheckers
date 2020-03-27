@@ -119,13 +119,14 @@ public class StandardGameMode implements GameMode {
             return !field.isOccupied();
         }
 
-        if (!jump) {
-            if (field.isOccupied()) {
-                    return validateMove(field.getNeighbours()[direction], destId, direction, true);
-            }
-        }
+        // if (!jump) {
+        //     if (field.isOccupied()) {
+        //             return validateMove(field.getNeighbours()[direction], destId, direction, true);
+        //     }
+        // }
 
-        return false;
+        // return false;
+        return true;
     }
 
 }
