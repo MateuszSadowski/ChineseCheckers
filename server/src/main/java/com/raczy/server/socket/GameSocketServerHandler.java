@@ -41,7 +41,10 @@ public class GameSocketServerHandler extends SimpleChannelInboundHandler<String>
         this.games = new HashMap<>();
         this.channelGroups = new HashMap<>();
 
-        createGame(null, 2);
+        // create default 100 games 
+        for(int i = 0; i < 100; i++){  
+            createGame(null, 2); 
+        } 
     }
 
     // MARK: LoginServerDelegate
