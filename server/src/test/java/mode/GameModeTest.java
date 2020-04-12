@@ -39,35 +39,35 @@ public class GameModeTest {
         player = new Player(0, "test");
     }
 
-    @Test
-    public void test_MoveValidation() {
-        board.getFieldMap().get(5).setChecker(player);
-        board.getFieldMap().get(0).setChecker(player);
-        board.getFieldMap().get(1).setChecker(player);
-        board.getFieldMap().get(2).setChecker(player);
-        board.getFieldMap().get(12).setChecker(player);
+    // @Test
+    // public void test_MoveValidation() {
+    //     board.getFieldMap().get(5).setChecker(player);
+    //     board.getFieldMap().get(0).setChecker(player);
+    //     board.getFieldMap().get(1).setChecker(player);
+    //     board.getFieldMap().get(2).setChecker(player);
+    //     board.getFieldMap().get(12).setChecker(player);
 
-        int expectedPossible = 3;
+    //     int expectedPossible = 3;
 
-        Field start = board.getFieldMap().get(0);
-        int actual = getPossibleMoveCount(start);
+    //     Field start = board.getFieldMap().get(0);
+    //     int actual = getPossibleMoveCount(start);
 
-        Assert.assertEquals(expectedPossible, actual);
-    }
+    //     Assert.assertEquals(expectedPossible, actual);
+    // }
 
-    @Test
-    public void test_MoveValidation_withZones() {
-        player.setZoneID(3);
+    // @Test
+    // public void test_MoveValidation_withZones() {
+    //     player.setZoneID(3);
 
-        Field start = board.getFieldMap().get(0).getNeighbours()[Field.TOPRIGHT];
-        start.getNeighbours()[Field.RIGHT].setChecker(player);
-        start.setChecker(player);
+    //     Field start = board.getFieldMap().get(0).getNeighbours()[Field.TOPRIGHT];
+    //     start.getNeighbours()[Field.RIGHT].setChecker(player);
+    //     start.setChecker(player);
 
-        int expectedPossible = 2;
-        int actual = getPossibleMoveCount(start);
+    //     int expectedPossible = 2;
+    //     int actual = getPossibleMoveCount(start);
 
-        Assert.assertEquals(expectedPossible, actual);
-    }
+    //     Assert.assertEquals(expectedPossible, actual);
+    // }
 
     private int getPossibleMoveCount(Field start) {
         Field temp;
